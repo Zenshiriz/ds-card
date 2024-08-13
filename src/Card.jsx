@@ -27,26 +27,21 @@ const Card = () => {
         }}
       >
         <div className=" min-h-[200px]  w-full relative rounded-t-xl">
-          <Tilt options={defaultOptions}>
           <img
             src={banner}
             alt="banner"
             className=" h-full w-full rounded-t-lg"
             />
-            </Tilt>
           <img
             src={pfp}
             className="  object-cover object-bottom absolute top-[50%] h-24 w-24 rounded-full left-[50%] translate-x-[-50%] translate-y-[50%] mx-auto"
             alt=""
           />
         </div>
-        <Tilt options={defaultOptions}>
         <div className="mt-14 flex flex-col pointer-events-none">
           <p className=" text-white text-xl">Mohammad Riza</p>
           <p className=" text-white text-sm">manHunter0028</p>
         </div>
-        </Tilt>
-        <Tilt options={defaultOptions}>
         <div className=" px-4 py-4 text-gray-50">
           <p className=" text-sm font-light text-gray-50 pointer-events-none">
             20yo Frontend Dev & Web Designer. Food lover, extrovert. Titans fan,
@@ -54,7 +49,6 @@ const Card = () => {
             determination, Eren-like passion for coding!
           </p>
         </div>
-        </Tilt>
       </div>
     </Tilt>
   );
