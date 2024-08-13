@@ -20,15 +20,14 @@ const Card = () => {
   return (
     <Tilt options={defaultOptions}>
       <div
-        className=" w-[70vw] h-full max-w-[350px] border-[4px] border-[#32130e]  rounded-xl bg-white shadow-lg "
+        className=" w-[80vw] md:w-[70vw] h-full max-w-[350px] border-[4px] border-[#32130e]  rounded-xl shadow-lg  bg-black"
         style={{
           background:
             "linear-gradient(0deg, rgba(50,19,14,1) 0%, rgba(167,99,79,1) 100%)",
         }}
       >
-        <div className=" min-h-[150px] w-full relative rounded-t-xl">
+        <div className=" min-h-[200px]  w-full relative rounded-t-xl">
           <Tilt options={defaultOptions}>
-
           <img
             src={banner}
             alt="banner"
