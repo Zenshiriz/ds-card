@@ -1,7 +1,8 @@
 import React from "react";
 import banner from "./assets/banner.jpeg";
-import pfp from "./assets/pfp.jpeg";
+import pfp from "./assets/pfp.jpg";
 import { Tilt } from "react-tilt";
+import TextReveal from "./animation/TextReveal";
 
 const defaultOptions = {
   reverse: false, // reverse the tilt direction
@@ -20,10 +21,10 @@ const Card = () => {
   return (
     <Tilt options={defaultOptions}>
       <div
-        className=" w-[80vw] md:w-[70vw] h-full max-w-[350px] border-[4px] border-[#32130e]  rounded-xl shadow-lg  bg-black"
+        className=" w-[80vw] md:w-[70vw]  max-w-[350px] border-[4px] border-[#97d3f6]  rounded-xl shadow-lg  bg-black"
         style={{
           background:
-            "linear-gradient(0deg, rgba(50,19,14,1) 0%, rgba(167,99,79,1) 100%)",
+            " linear-gradient(0deg, rgba(131,58,180,1) 0%, rgba(151,211,246,1) 100%)",
         }}
       >
         <div className=" min-h-[200px]  w-full relative rounded-t-xl">
@@ -39,14 +40,12 @@ const Card = () => {
           />
         </div>
         <div className="mt-14 flex flex-col pointer-events-none">
-          <p className=" text-white text-xl">Mohammad Riza</p>
+          <p className=" text-white text-xl"><TextReveal title={'Mohammad Riza'} /></p>
           <p className=" text-white text-sm">manHunter0028</p>
         </div>
         <div className=" px-4 py-4 text-gray-50">
           <p className=" text-sm font-light text-gray-50 pointer-events-none">
-            20yo Frontend Dev & Web Designer. Food lover, extrovert. Titans fan,
-            always ready to fight for my dreams. Colossal appetite, Armored
-            determination, Eren-like passion for coding!
+            <TextReveal para={"20yo Frontend Dev & Web Designer. Food lover, extrovert.  Talkative, always ready to fight for my dreams. Colossal appetite, Armored determination,passion for coding!"}/>
           </p>
         </div>
       </div>
