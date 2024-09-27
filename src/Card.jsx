@@ -32,7 +32,7 @@ const Card = () => {
             src={banner}
             alt="banner"
             className=" h-full w-full rounded-t-lg"
-            />
+          />
           <img
             src={pfp}
             className="  object-cover object-bottom absolute top-[50%] h-24 w-24 rounded-full left-[50%] translate-x-[-50%] translate-y-[50%] mx-auto"
@@ -40,12 +40,16 @@ const Card = () => {
           />
         </div>
         <div className="mt-14 flex flex-col pointer-events-none">
-          <p className=" text-white text-xl"><TextReveal title={'Mohammad Riza'} /></p>
+          <p className=" text-white text-xl">
+          Mohammad Riza
+          </p>
           <p className=" text-white text-sm">manHunter0028</p>
         </div>
         <div className=" px-4 py-4 text-gray-50">
           <p className=" text-sm font-light text-gray-50 pointer-events-none">
-            <TextReveal para={"20yo Frontend Dev & Web Designer. Food lover, extrovert.  Talkative, always ready to fight for my dreams. Colossal appetite, Armored determination,passion for coding!"}/>
+            20yo Frontend Dev & Web Designer. Food lover, extrovert. Talkative,
+            always ready to fight for my dreams. Colossal appetite, Armored
+            determination,passion for coding!
           </p>
         </div>
       </div>
