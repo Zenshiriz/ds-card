@@ -2,7 +2,6 @@ import React from "react";
 import banner from "./assets/banner.jpeg";
 import pfp from "./assets/pfp.jpg";
 import { Tilt } from "react-tilt";
-import TextReveal from "./animation/TextReveal";
 
 const defaultOptions = {
   reverse: false, // reverse the tilt direction
