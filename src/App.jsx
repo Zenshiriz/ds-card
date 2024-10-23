@@ -26,6 +26,7 @@ export default function App() {
         playsInline
         autoPlay
         muted
+        
         loop
         className=" h-full w-full object-cover aspect-auto  filter brightness-50"
       >

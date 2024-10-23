@@ -2,6 +2,7 @@ import React from "react";
 import banner from "./assets/banner.jpeg";
 import pfp from "./assets/pfp.jpg";
 import { Tilt } from "react-tilt";
+import { motion } from "framer-motion";
 
 const defaultOptions = {
   reverse: false, // reverse the tilt direction
@@ -17,6 +18,22 @@ const defaultOptions = {
 const Card = () => {
   //#a7634f primary
   //#32130e accent
+  const typoverients = {
+    initial: {
+      opacity: 0,
+      scale: 0.8,
+      y: -50,
+    },
+    animate: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+      },
+    },
+  };
   return (
     <Tilt options={defaultOptions}>
       <div
@@ -26,30 +43,57 @@ const Card = () => {
             " linear-gradient(0deg, rgba(131,58,180,1) 0%, rgba(151,211,246,1) 100%)",
         }}
       >
-        <div className=" min-h-[200px]  w-full relative rounded-t-xl">
-          <img
+        <div className=" min-h-[200px] w-full relative rounded-t-xl">
+          <motion.img
             src={banner}
             alt="banner"
+            loading="lazy"
             className=" h-full w-full rounded-t-lg"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
           />
-          <img
+          <motion.img
             src={pfp}
             className="  object-cover object-bottom absolute top-[50%] h-24 w-24 rounded-full left-[50%] translate-x-[-50%] translate-y-[50%] mx-auto"
-            alt=""
+            alt={pfp}
+            initial={{ opacity: 0, top: 0 }}
+            animate={{ opacity: 1, top: "50%" }}
+            transition={{ duration: 1, ease: "easeInOut" }}
           />
         </div>
-        <div className="mt-14 flex flex-col pointer-events-none">
-          <p className=" text-white text-xl">
-          Mohammad Riza
-          </p>
-          <p className=" text-white text-sm">manHunter0028</p>
-        </div>
+        <motion.div
+          variants={typoverients}
+          className="mt-14 flex flex-col pointer-events-none"
+        >
+          <motion.p
+            variants={typoverients}
+            initial="initial"
+            animate="animate"
+            className=" text-white text-xl"
+          >
+            Mohammad Riza
+          </motion.p>
+          <motion.p
+            variants={typoverients}
+            initial="initial"
+            animate="animate"
+            className=" text-white text-sm"
+          >
+            manHunter0028
+          </motion.p>
+        </motion.div>
         <div className=" px-4 py-4 text-gray-50">
-          <p className=" text-sm font-light text-gray-50 pointer-events-none">
+          <motion.p
+            variants={typoverients}
+            initial="initial"
+            animate="animate"
+            className=" text-sm font-light text-gray-50 pointer-events-none"
+          >
             20yo Frontend Dev & Web Designer. Food lover, extrovert. Talkative,
             always ready to fight for my dreams. Colossal appetite, Armored
             determination,passion for coding!
-          </p>
+          </motion.p>
         </div>
       </div>
     </Tilt>
